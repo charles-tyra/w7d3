@@ -11,6 +11,16 @@ module GoalApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.generators do |g|
+      g.test_framework :rspec, # Tells rails to use rspec for testing
+        :fixtures => false, # Fixtures are rails default for test objects
+        :view_specs => false,
+        :helper_specs => false,
+        :routing_specs => false,
+        :controller_specs => true,
+        :request_specs => false
+      g.fixture_replacement :factory_bot, :dir => "spec/factories"
+    end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
