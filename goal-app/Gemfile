@@ -50,7 +50,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "byebug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rspec-rails' # the rails version of rspec
   gem 'rails-controller-testing' # provides some cool methods to help testing
   gem 'capybara' # end-to-end feature testing
@@ -66,7 +66,7 @@ group :development do
   gem "web-console"
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'guard-rspec'
+  # gem 'guard-rspec'
   gem 'annotate'
   gem 'pry-rails'
   gem 'better_errors'
@@ -81,8 +81,8 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
+  # gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'launchy'
+  # gem 'launchy'
 end
